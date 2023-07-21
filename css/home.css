@@ -48,6 +48,10 @@ body {
   font-family: "Poppins";
 }
 
+p {
+  margin: 0;
+}
+
 .navbar {
   background-color: #1c1e53 !important;
 }

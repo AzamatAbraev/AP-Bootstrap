@@ -1,0 +1,251 @@
+@use "../global.scss";
+
+.navbar {
+  background-color: #1c1e53 !important;
+  .container-lg {
+    display: flex;
+    align-items: center !important;
+    .nav-link {
+      color: #bbbbcb;
+      padding-left: 20px;
+      padding-right: 20px;
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .navbar-toggler {
+      background-color: #fff;
+    }
+
+    .nav__btn {
+      padding: 16px 48px;
+      background-color: transparent;
+      border-radius: 41px;
+      border: 2px solid rgba(244, 246, 252, 0.2);
+      color: #fff;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background-color: #fcd980;
+        color: #1b1c2b;
+        border: 2px solid #fcd980;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #1c1e53;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 142px;
+  .footer__left {
+    .footer__text {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28px;
+      padding-top: 24px;
+      padding-bottom: 86px;
+    }
+
+    .footer__contact {
+      display: flex;
+      gap: 29px;
+      background-color: #fcd980;
+      max-width: 500px;
+      padding: 18px 37px;
+      align-items: center;
+      &__info {
+        h4,
+        p {
+          color: #282938;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 32px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .footer__right {
+    h2 {
+      color: #fff;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 64px;
+      padding-bottom: 14px;
+      margin: 0;
+    }
+
+    &__text {
+      color: #f4f6fc;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      padding-bottom: 28px;
+      margin: 0;
+      max-width: 400px;
+    }
+
+    .footer__logos {
+      display: flex;
+      gap: 26px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+}
+
+@media (max-width: 430px) {
+  .footer__contact {
+    gap: 10px !important;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 18px 18px;
+    align-items: start !important;
+  }
+}
+
+// Home Section
+
+main {
+  margin-top: 75.2px;
+}
+
+.home {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+
+.home__main__img {
+  width: 100%;
+}
+
+.home__row {
+  &__left {
+    .home__subtitle {
+      color: #282938;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 32px;
+      margin: 0;
+    }
+
+    .home__title {
+      color: #282938;
+      font-size: 54px;
+      font-weight: 600;
+      line-height: 74px;
+      padding-top: 8px;
+      padding-bottom: 31px;
+    }
+
+    .home__desc {
+      color: #282938;
+      text-align: justify;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+}
+
+.goals__row {
+  background: #f4f5f5;
+  padding-top: 96px;
+  margin-bottom: 128px;
+  &__top {
+    .goals__title {
+      color: #282938;
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 56px;
+    }
+
+    .goals__desc {
+      color: #282938;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+}
+
+.goals__main__img {
+  width: 100%;
+}
+
+// Team Section
+
+.team {
+  padding-top: 128px;
+  padding-bottom: 128px;
+  background-color: #f4f6fc;
+}
+
+.team__header {
+  &__title {
+    color: #282938;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    margin-bottom: 48px;
+  }
+}
+
+.team__img {
+  .team__member__img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    height: 168px;
+    width: 168px;
+  }
+
+  &__hover {
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.team__card {
+  padding: 48px 64px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  &:hover .team__img__hover {
+    opacity: 1;
+  }
+
+  .team__name {
+    color: #1d2130;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    margin-top: 30px;
+  }
+
+  .team__position {
+    color: #1d2130;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}

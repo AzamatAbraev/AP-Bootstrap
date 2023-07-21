@@ -1,0 +1,327 @@
+@use "../global.scss";
+
+.navbar {
+  background-color: #1c1e53 !important;
+  .container-lg {
+    display: flex;
+    align-items: center !important;
+    .nav-link {
+      color: #bbbbcb;
+      padding-left: 20px;
+      padding-right: 20px;
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .navbar-toggler {
+      background-color: #fff;
+    }
+
+    .nav__btn {
+      padding: 16px 48px;
+      background-color: transparent;
+      border-radius: 41px;
+      border: 2px solid rgba(244, 246, 252, 0.2);
+      color: #fff;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background-color: #fcd980;
+        color: #1b1c2b;
+        border: 2px solid #fcd980;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #1c1e53;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 142px;
+  .footer__left {
+    .footer__text {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28px;
+      padding-top: 24px;
+      padding-bottom: 86px;
+    }
+
+    .footer__contact {
+      display: flex;
+      gap: 29px;
+      background-color: #fcd980;
+      max-width: 500px;
+      padding: 18px 37px;
+      align-items: center;
+      &__info {
+        h4,
+        p {
+          color: #282938;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 32px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .footer__right {
+    h2 {
+      color: #fff;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 64px;
+      padding-bottom: 14px;
+      margin: 0;
+    }
+
+    &__text {
+      color: #f4f6fc;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      padding-bottom: 28px;
+      margin: 0;
+      max-width: 400px;
+    }
+
+    .footer__logos {
+      display: flex;
+      gap: 26px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+}
+
+@media (max-width: 430px) {
+  .footer__contact {
+    gap: 10px !important;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 18px 18px;
+    align-items: start !important;
+  }
+}
+
+// Pricing Plan Section Start
+
+main {
+  margin-top: 75.2px;
+}
+
+.pricing__container {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+
+.pricing__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 16px;
+  .pricing__title {
+    color: #282938;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    margin: 0;
+  }
+
+  .pricing__desc {
+    color: #282938;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    max-width: 562px;
+  }
+}
+
+.pricing__card__features {
+  display: flex;
+  gap: 12px;
+}
+
+.pricing__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 32px;
+  row-gap: 32px;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricing__card {
+  padding: 64px 77px 62px 48px;
+  border-radius: 12px;
+  background: #f4f6fc;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    background: #1c1e53;
+  }
+  &:hover * {
+    color: #fff;
+  }
+  &:hover .price__card__btn {
+    background-color: #fcd980 !important;
+    color: #282938 !important;
+  }
+
+  &:hover &__price {
+    color: #fcd980;
+  }
+  &__price {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    p {
+      color: #282938;
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 56px;
+    }
+
+    span {
+      color: #2405f2;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+
+  &__title {
+    color: #282938;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 8px;
+  }
+
+  &__desc {
+    color: #282938;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  &__features {
+    p {
+      color: #282938;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+
+  &__btn {
+    padding: 15px 51px;
+    color: #f4f6fc;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+    border-radius: 41px;
+    background: #282938;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      color: #282938;
+      background-color: #fcd980;
+    }
+  }
+
+  &__points {
+    margin-top: 78px;
+    margin-bottom: 78px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+// Frequently Asked Questions Section
+
+.faq {
+  padding-bottom: 128px;
+}
+
+.faq__header {
+  &__title {
+    color: #282938;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+  }
+
+  &__link {
+    color: #2405f2;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.accordion1 {
+  .accordion-button {
+    &::after {
+      background-image: url("../../images/pricing/plus.svg");
+      transform: scale(1.5);
+    }
+    &:not(.collapsed)::after {
+      background-image: url("../../images/pricing/plus.svg");
+      transform: rotate(45deg) scale(1.5);
+    }
+  }
+
+  .accordion-inside {
+    display: flex;
+    align-items: center;
+    gap: 58px;
+    span {
+      color: #2405f2;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+    }
+
+    p {
+      color: #282938;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .accordion-inside {
+    span {
+      display: none;
+    }
+  }
+}
